@@ -7,9 +7,5 @@ const startApp = async () => {
   await initMongoConnection(); 
   setupServer();              
 };
-process.on('unhandledRejection', (err) => {
-  console.log('Unhandled rejection:', err.message);
-  process.exit(1);
-});
 
 startApp();
